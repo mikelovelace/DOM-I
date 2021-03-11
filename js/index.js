@@ -61,21 +61,47 @@ ctaButton.textContent = siteContent["cta"]["button"]
 
 // ######## TOP CONTENT ####### //
 // main top heading 1
-const heading1 = document.querySelectorAll(".top-content .text-content h4")
-heading1[0].textContent = siteContent["main-content"]["features-h4"]
+const topHeading1 = document.querySelectorAll(".top-content .text-content h4")
+topHeading1[0].textContent = siteContent["main-content"]["features-h4"]
 
 // main top paragraph 1
-const paragraph1 = document.querySelectorAll(".top-content .text-content p")
-paragraph1[0].textContent = siteContent["main-content"]["features-content"]
+const topPara1 = document.querySelectorAll(".top-content .text-content p")
+topPara1[0].textContent = siteContent["main-content"]["features-content"]
 
 // main top heading 2
-const heading2 = document.querySelectorAll(".top-content .text-content h4")
-heading2[1].textContent = siteContent["main-content"]["about-h4"]
+const topHeading2 = document.querySelectorAll(".top-content .text-content h4")
+topHeading2[1].textContent = siteContent["main-content"]["about-h4"]
 
 // main top paragraph 2
-const paragraph2 = document.querySelectorAll(".top-content .text-content p")
-paragraph2[1].textContent = siteContent["main-content"]["about-content"]
+const topPara2 = document.querySelectorAll(".top-content .text-content p")
+topPara2[1].textContent = siteContent["main-content"]["about-content"]
 
 // main middle image
 const midImg = document.querySelector("#middle-img")
 midImg.src = siteContent["main-content"]["middle-img-src"]
+
+
+// ######## TOP CONTENT ####### //
+// bottom heading 1
+const botHeading1 = document.querySelectorAll(".bottom-content .text-content h4")
+botHeading1[0].textContent = siteContent["main-content"]["services-h4"]
+
+// bottom paragraph 1
+const botPara1 = document.querySelectorAll(".bottom-content .text-content p")
+botPara1[0].textContent = siteContent["main-content"]["services-content"]
+
+// bottom heading 2
+const botHeading2 = document.querySelectorAll(".bottom-content .text-content h4")
+botHeading2[1].textContent = siteContent["main-content"]["product-h4"]
+
+// bottom paragraph 2
+const botPara2 = document.querySelectorAll(".bottom-content .text-content p")
+botPara2[1].textContent = siteContent["main-content"]["product-content"]
+
+// bottom heading 3
+const botHeading3 = document.querySelectorAll(".bottom-content .text-content h4")
+botHeading3[2].textContent = siteContent["main-content"]["vision-h4"]
+
+// bottom paragraph 3
+const botPara3 = document.querySelectorAll(".bottom-content .text-content p")
+botPara3[2].textContent = siteContent["main-content"]["vision-content"]
