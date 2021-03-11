@@ -47,12 +47,35 @@ navLinks.forEach((link, index) => { // loop through nav links -- forEach link an
   link.textContent = siteContent["nav"][`nav-item-${index+1}`] // traverse through the siteContent object and set each links text content to nav-item-index+1 which will start at nav-item-1 instead of nav-item-0 and end at nav-item-6. If the nav-item- in the object started at nav-item-0, then I would only need to have ${index} instead of ${index+1}. It appends the number to the end of each nav-item- starting at number 1 because I made it start the loop at number 1 instead of 0 by adding +1 to index.
 })
 
-// Header Title
-const headerTitle = document.querySelector(".cta .cta-text h1")
-headerTitle.textContent = siteContent["cta"]["h1"]
+// call to action Title
+const ctaTitle = document.querySelector(".cta .cta-text h1")
+ctaTitle.textContent = siteContent["cta"]["h1"]
 
-const headerImg = document.querySelector(".cta img")
-headerImg.src = siteContent["cta"]["img-src"]
+// call to action image
+const ctaImg = document.querySelector(".cta img")
+ctaImg.src = siteContent["cta"]["img-src"]
 
-const headerButton = document.querySelector(".cta .cta-text button")
-headerButton.textContent = siteContent["cta"]["button"]
+// call to action button
+const ctaButton = document.querySelector(".cta .cta-text button")
+ctaButton.textContent = siteContent["cta"]["button"]
+
+// ######## TOP CONTENT ####### //
+// main top heading 1
+const heading1 = document.querySelectorAll(".top-content .text-content h4")
+heading1[0].textContent = siteContent["main-content"]["features-h4"]
+
+// main top paragraph 1
+const paragraph1 = document.querySelectorAll(".top-content .text-content p")
+paragraph1[0].textContent = siteContent["main-content"]["features-content"]
+
+// main top heading 2
+const heading2 = document.querySelectorAll(".top-content .text-content h4")
+heading2[1].textContent = siteContent["main-content"]["about-h4"]
+
+// main top paragraph 2
+const paragraph2 = document.querySelectorAll(".top-content .text-content p")
+paragraph2[1].textContent = siteContent["main-content"]["about-content"]
+
+// main middle image
+const midImg = document.querySelector("#middle-img")
+midImg.src = siteContent["main-content"]["middle-img-src"]
