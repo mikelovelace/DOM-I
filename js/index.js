@@ -47,4 +47,12 @@ navLinks.forEach((link, index) => { // loop through nav links -- forEach link an
   link.textContent = siteContent["nav"][`nav-item-${index+1}`] // traverse through the siteContent object and set each links text content to nav-item-index+1 which will start at nav-item-1 instead of nav-item-0 and end at nav-item-6. If the nav-item- in the object started at nav-item-0, then I would only need to have ${index} instead of ${index+1}. It appends the number to the end of each nav-item- starting at number 1 because I made it start the loop at number 1 instead of 0 by adding +1 to index.
 })
 
+// Header Title
+const headerTitle = document.querySelector(".cta .cta-text h1")
+headerTitle.textContent = siteContent["cta"]["h1"]
 
+const headerImg = document.querySelector(".cta img")
+headerImg.src = siteContent["cta"]["img-src"]
+
+const headerButton = document.querySelector(".cta .cta-text button")
+headerButton.textContent = siteContent["cta"]["button"]
