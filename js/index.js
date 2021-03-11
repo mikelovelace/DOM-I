@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street \n Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -38,5 +38,113 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+const logo = document.querySelector("#logo-img");
+logo.setAttribute("src", siteContent["nav"]["img-src"]);
+
+// Nav Links
+const navLinks = document.querySelectorAll("nav a");
+navLinks.forEach((link, index) => { // loop through nav links -- forEach link and their index to add corresponding number to the end of each nav-item-
+  link.textContent = siteContent["nav"][`nav-item-${index+1}`] // traverse through the siteContent object and set each links text content to nav-item-index+1 which will start at nav-item-1 instead of nav-item-0 and end at nav-item-6. If the nav-item- in the object started at nav-item-0, then I would only need to have ${index} instead of ${index+1}. It appends the number to the end of each nav-item- starting at number 1 because I made it start the loop at number 1 instead of 0 by adding +1 to index.
+})
+
+// prepend link
+const createFirstLink = document.createElement("a")
+createFirstLink.textContent = "Start"
+createFirstLink.setAttribute = "href"
+createFirstLink.href = "#"
+
+const firstLink = document.querySelector("nav")
+firstLink.prepend(createFirstLink)
+
+
+// append link
+const createLastLink = document.createElement("a")
+createLastLink.textContent = "End"
+createLastLink.setAttribute = "href"
+createLastLink.href = "#"
+
+const lastLink = document.querySelector("nav")
+lastLink.append(createLastLink)
+
+
+// color links green
+const colorLinks = document.querySelectorAll("nav a")
+colorLinks.forEach((link) => {
+  link.style.color = "green"
+})
+
+
+// call to action Title
+const ctaTitle = document.querySelector(".cta .cta-text h1")
+ctaTitle.textContent = siteContent["cta"]["h1"]
+
+// call to action image
+const ctaImg = document.querySelector(".cta img")
+ctaImg.src = siteContent["cta"]["img-src"]
+
+// call to action button
+const ctaButton = document.querySelector(".cta .cta-text button")
+ctaButton.textContent = siteContent["cta"]["button"]
+
+// ######## TOP CONTENT ####### //
+// main top heading 1
+const topHeading1 = document.querySelectorAll(".top-content .text-content h4")
+topHeading1[0].textContent = siteContent["main-content"]["features-h4"]
+
+// main top paragraph 1
+const topPara1 = document.querySelectorAll(".top-content .text-content p")
+topPara1[0].textContent = siteContent["main-content"]["features-content"]
+
+// main top heading 2
+const topHeading2 = document.querySelectorAll(".top-content .text-content h4")
+topHeading2[1].textContent = siteContent["main-content"]["about-h4"]
+
+// main top paragraph 2
+const topPara2 = document.querySelectorAll(".top-content .text-content p")
+topPara2[1].textContent = siteContent["main-content"]["about-content"]
+
+// main middle image
+const midImg = document.querySelector("#middle-img")
+midImg.src = siteContent["main-content"]["middle-img-src"]
+
+
+// ######## BOTTOM CONTENT ####### //
+// bottom heading 1
+const botHeading1 = document.querySelectorAll(".bottom-content .text-content h4")
+botHeading1[0].textContent = siteContent["main-content"]["services-h4"]
+
+// bottom paragraph 1
+const botPara1 = document.querySelectorAll(".bottom-content .text-content p")
+botPara1[0].textContent = siteContent["main-content"]["services-content"]
+
+// bottom heading 2
+const botHeading2 = document.querySelectorAll(".bottom-content .text-content h4")
+botHeading2[1].textContent = siteContent["main-content"]["product-h4"]
+
+// bottom paragraph 2
+const botPara2 = document.querySelectorAll(".bottom-content .text-content p")
+botPara2[1].textContent = siteContent["main-content"]["product-content"]
+
+// bottom heading 3
+const botHeading3 = document.querySelectorAll(".bottom-content .text-content h4")
+botHeading3[2].textContent = siteContent["main-content"]["vision-h4"]
+
+// bottom paragraph 3
+const botPara3 = document.querySelectorAll(".bottom-content .text-content p")
+botPara3[2].textContent = siteContent["main-content"]["vision-content"]
+
+
+// ######## CONTACT SECTION ####### //
+// contact title
+const contactTitle = document.querySelector(".contact h4")
+contactTitle.textContent = siteContent["contact"]["contact-h4"]
+
+// address
+const contactInfo = document.querySelectorAll(".contact p")
+contactInfo[0].textContent = siteContent["contact"]["address"]
+contactInfo[1].textContent = siteContent["contact"]["phone"]
+contactInfo[2].textContent = siteContent["contact"]["email"]
+
+// footer
+const footer = document.querySelector("footer p")
+footer.textContent = siteContent["footer"]["copyright"]
